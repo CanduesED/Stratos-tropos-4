@@ -175,7 +175,7 @@ stchaind status 2>&1 | jq .SyncInfo
 
 ![image](https://user-images.githubusercontent.com/101149671/181054593-3a2eab44-1aa5-4efa-917f-d161e87130c0.png)
 
-## Şimdi o eşleşirken biz cüzdan oluşturalım:
+## Eşleşme işlemini beklerken cüzdan oluşturuyoruz.
 
 * WalletName kısmını kendı cüzdan adınız yapın!
 * Çıkan bilgileri not edin en altta 12 kelımenız olacak o da dahil.
@@ -184,7 +184,7 @@ stchaind status 2>&1 | jq .SyncInfo
 stchaind keys add --hd-path "m/44'/606'/0'/0/0" --keyring-backend test  WalletName
 ```
 
-## Faucetten token alalım
+## Faucetten token alıyoruz.
 
 * WalletAdres kısmını kaldırın ve cüzdan adresinizi yazın, tırnakları kaldırmayın!
 
@@ -192,7 +192,7 @@ stchaind keys add --hd-path "m/44'/606'/0'/0/0" --keyring-backend test  WalletNa
 curl --header "Content-Type: application/json" --request POST --data '{"denom":"ustos","address":"walletAddress"} ' https://faucet-tropos.thestratos.org/credit
 ```
 
-## Bakalım tokenler gelmişmi 
+## Tokenlerin cüzdana geldiğini kontrol ediyoruz.
 
 * st1400.. kısmına kendi cüzdan adresinizi yazın
 
@@ -202,7 +202,7 @@ stchaind query bank balances st1400f6e4kes5sk0ltfz8ms74ga9wzd9dulchh5q
 
 ![image](https://user-images.githubusercontent.com/101149671/181055881-b35c2aa7-d751-44ab-aaed-9a92381a2e62.png)
 
-## Validator oluşturma
+## Validator oluşturma adımı
 
 * NodeName kısmına validator ismimizi girin!
 * WalletAddres kısmına cüzdan adınızı girin!
